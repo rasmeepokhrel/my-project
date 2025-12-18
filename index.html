@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Student Details Form</title>
+ <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+
+  <div class="bg-pink-400 p-8 rounded-lg shadow-lg w-full max-w-md">
+    <h2 class="text-2xl font-bold mb-6 text-center text-blue-700">
+      Student Details Form
+    </h2>
+
+    <div class="space-y-3">
+
+      <input id="FirstName" type="text" placeholder="First Name"
+        class="w-full p-2 border rounded">
+      <p id="error1" class="text-red-600 text-sm"></p>
+
+      <input id="LastName" type="text" placeholder="Last Name"
+        class="w-full p-2 border rounded">
+      <p id="error2" class="text-red-600 text-sm"></p>
+
+      <input id="address" type="text" placeholder="Address"
+        class="w-full p-2 border rounded">
+      <p id="error3" class="text-red-600 text-sm"></p>
+
+      <input id="email" type="email" placeholder="Email"
+        class="w-full p-2 border rounded">
+      <p id="error4" class="text-red-600 text-sm"></p>
+
+      <input id="phone" type="text" placeholder="Phone Number"
+        class="w-full p-2 border rounded">
+      <p id="error5" class="text-red-600 text-sm"></p>
+
+    </div>
+
+    <button onclick="Showdata()"
+      class="mt-6 w-full bg-blue-600 text-white py-2 rounded">
+      Show Details
+    </button>
+
+    <div class="mt-6 text-gray-800">
+      <p id="Showdatainh1"></p>
+      <p id="Showdatainh2"></p>
+      <p id="Showdatainh3"></p>
+      <p id="Showdatainh4"></p>
+      <p id="Showdatainh5"></p>
+    </div>
+  </div>
+
+<script>
+function Showdata() {
+
+  
+  document.querySelectorAll("p[id^='error']").forEach(e => e.innerHTML = "");
+
+  const FirstName = document.getElementById("FirstName").value;
+  const LastName = document.getElementById("LastName").value;
+  const Address = document.getElementById("address").value;
+  const email = document.getElementById("email").value;
+  const phone = document.getElementById("phone").value;
+
+  if (FirstName === "") {
+    document.getElementById("error1").innerHTML = "Enter first name";
+    return;
+  }
+  if (LastName === "") {
+    document.getElementById("error2").innerHTML = "Enter last name";
+    return;
+  }
+  if (Address === "") {
+    document.getElementById("error3").innerHTML = "Enter address";
+    return;
+  }
+  if (email === "") {
+    document.getElementById("error4").innerHTML = "Enter email";
+    return;
+  }
+  if (phone === "") {
+    document.getElementById("error5").innerHTML = "Enter phone number";
+    return;
+  }
+
+  document.getElementById("Showdatainh1").innerHTML = "First Name: " + FirstName;
+  document.getElementById("Showdatainh2").innerHTML = "Last Name: " + LastName;
+  document.getElementById("Showdatainh3").innerHTML = "Address: " + Address;
+  document.getElementById("Showdatainh4").innerHTML = "Email: " + email;
+  document.getElementById("Showdatainh5").innerHTML = "Phone: " + phone;
+}
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Date Example</title>
+  </head>
+
+  <body>
+    <div>Today Date is <span id="date"></span></div>
+
+    <script>
+      function showDate() {
+        let data = new Date();
+
+        console.log("Full Year:", data.getFullYear());
+        console.log("Month:", data.getMonth() + 1);
+        console.log("Date:", data.getDate());
+        console.log("Hours:", data.getHours());
+        console.log("Minutes:", data.getMinutes());
+        console.log("Seconds:", data.getSeconds());
+
+        document.getElementById("date").innerHTML =
+          `${data.getFullYear()} / 
+           ${data.getMonth() + 1} / 
+           ${data.getDate()} 
+           ${data.getHours()}:${data.getMinutes()}:${data.getSeconds()}`;
+      }
+
+      showDate();
+    </script>
+  </body>
+</html>
