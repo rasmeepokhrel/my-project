@@ -9,6 +9,7 @@
 <body class="p-6">
 
     <button id="box">clickme</button>
+    
 <script>
         const box = document.getElementById("box");
 
@@ -17,7 +18,13 @@
         });
 
         box.addEventListener("dblclick", function () {
-            console.log("Button is double clicked");
+            alert("Button is double clicked");
+        });
+         box.addEventListener("keydown", function () {
+            alert("Button is keydown clicked");
+        });
+         box.addEventListener("mouseup", function () {
+            alert("Button is mouseup clicked");
         });
     </script>
 
