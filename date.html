@@ -26,8 +26,11 @@
            ${data.getDate()} 
            ${data.getHours()}:${data.getMinutes()}:${data.getSeconds()}`;
       }
-
-      showDate();
+      
+      setInterval(()=>{
+       showDate();
+      },1000)
+      setdata()
     </script>
   </body>
 </html>
